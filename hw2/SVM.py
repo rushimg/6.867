@@ -12,8 +12,11 @@ class SVM:
 		#self.kernel = kernel
 
 	#linear kernel
-	def kernel(self,X,X_prime):
+	def linear_kernel(self,X,X_prime):
 		return np.dot(X,X_prime)
+	
+	def rbf_kernel(x, y, sigma=5.0):
+	    	return np.exp(-linalg.norm(x-y)**2 / (2 * (sigma ** 2)))
 
 	def train_gold(self):
 		''' sklearn imlplementation to check results against '''
@@ -27,6 +30,9 @@ class SVM:
 		return model.predict(x_test)
 
 	def train(self):
+		'''
+		http://www.mblondel.org/journal/2010/09/19/support-vector-machines-in-python/
+		'''
 		y = self.Y_train 
 		X = self.X_train
 		n_samples = self.Y_train.shape[0]
@@ -34,62 +40,57 @@ class SVM:
 		K = np.zeros((n_samples, n_samples))
 		for i in range(n_samples):
     			for j in range(n_samples):
-	        		K[i,j] = self.kernel(X[i], X[j])
+	        		K[i,j] = self.linear_kernel(X[i], X[j])
 
 		P = cvxopt.matrix(np.outer(y,y) * K)
 		q = cvxopt.matrix(np.ones(n_samples) * -1)
 		A = cvxopt.matrix(y, (1,n_samples))
 		b = cvxopt.matrix(0.0)
-		G = cvxopt.matrix(np.diag(np.ones(n_samples) * -1))
-		h = cvxopt.matrix(np.zeros(n_samples))		
-        	solvers.options['feastol'] = 1e-8
-		solution = solvers.qp(P, q, G, h, A, b)
-		self.alphas = np.array(solution['x'])
-		#print 'alphas',alphas		
-		#print 'y', y
-		# calculate w
-		#self.w = (alphas*(y*X))
-		#print self.w.shape
-		#print y.shape
-		#print alphas.shape
 		
-		#self.w = np.outer(y,alphas)
-		#print 'w', self.w
-		# calculate w_0
-		#self.w_0 = 1 	
+		tmp1 = np.diag(np.ones(n_samples) * -1)
+                tmp2 = np.identity(n_samples)
+                G = cvxopt.matrix(np.vstack((tmp1, tmp2)))
+                tmp1 = np.zeros(n_samples)
+        	tmp2 = np.ones(n_samples) * self.C
+	        h = cvxopt.matrix(np.hstack((tmp1, tmp2)))
+
+		#G = cvxopt.matrix(np.diag(np.ones(n_samples) * -1)) # hard margin
+		#h = cvxopt.matrix(np.zeros(n_samples)) # hard margin		
+       
+		solvers.options['feastol'] = 1e-8
+		solution = solvers.qp(P, q, G, h, A, b)
+		self.alphas = self.clean_alphas(np.array(solution['x']))
+		sv = self.alphas > 1e-5
+		
+		#print self.alphas
+		self.calc_w_0()
+		
 		return True
 	
+	def calc_w_0(self):
+		w_0 = 0
+		for j in range(0,len(self.alphas)):
+                        inner_sum = 0
+                        for i in range(0,len(self.alphas)):
+                                inner_sum += self.alphas[i] * self.Y_train[i] * (np.dot(self.X_train[j].T, self.X_train[i]))
+                        w_0 += (self.Y_train[j]-inner_sum)
+                        #w_0 = self.Y_train[i] - val
+                w_0 = w_0/len(self.alphas)
+		self.w_0 = w_0
+		return True
+	
+	def clean_alphas(self,alphas):
+		#a_s = [el for el in alphas if el > .0000005]
+		#return a_s
+		return alphas
+	
 	def test(self, x_test):
-		#print 'test'
-		#print self.w
-		#print (np.dot(self.Y_train*self.alphas.T))
-		#print self.alphas.shape
-		#print self.X_train.shape
-		#print x_test
-		#w = self.Y_train*self.a	
-		#val = self.Y_train*self.alphas*self.X_train.T*x_test
 		val = 0
 		for i in range(0,len(self.alphas)):
 			#print i	
 			val += self.alphas[i] * self.Y_train[i] * (np.dot(x_test.T, self.X_train[i]))
-		
-		w_0 = 0
-		for j in range(0,len(self.alphas)):	
-			inner_sum = 0
-			for i in range(0,len(self.alphas)):
-				inner_sum += self.alphas[i] * self.Y_train[i] * (np.dot(self.X_train[j].T, self.X_train[i]))
-			w_0 += (self.Y_train[j]-inner_sum)
-			#w_0 = self.Y_train[i] - val
-		w_0 = w_0/len(self.alphas)
-
-		val += w_0
-		
-		#print np.dot(self.alphas,self.Y_train.T)
-		#print np.dot(self.X_train,x_test.T)
-		#val = np.dot((self.alphas*self.Y_train),(self.X_train.T,x_test))
-		#val = self.w * (np.dot(x_test,x_test.T))
-		#val = random.uniform(-1, 1)
-		#print 'val',val
+		val += self.w_0
+		'''decision function'''
 		if val > 0:
 			return 1
 		elif val< 0:

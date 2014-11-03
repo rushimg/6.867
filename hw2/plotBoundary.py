@@ -16,6 +16,7 @@ def plotDecisionBoundary(X, Y, scoreFn, values, title = ""):
     xx, yy = meshgrid(arange(x_min, x_max, h),
                       arange(y_min, y_max, h))
     zz = array([scoreFn(x) for x in c_[xx.ravel(), yy.ravel()]])
+    temp = zz
     zz = zz.reshape(xx.shape)
     pl.figure()
     CS = pl.contour(xx, yy, zz, values, colors = 'green', linestyles = 'solid', linewidths = 2)
@@ -26,3 +27,10 @@ def plotDecisionBoundary(X, Y, scoreFn, values, title = ""):
     pl.axis('tight')
     # added by RMG
     pl.show()
+    #incorrect = 0
+    
+    #for i in range(len(Y)):
+	#if temp[i] != Y[i]:
+	#	incorrect += 1
+    #print "%d out of %d wrong predictions" % (incorrect, len(Y))
+

@@ -4,7 +4,7 @@ from SVM import SVM
 import numpy as np
 
 # parameters
-name = 'ls'
+name = 'bigOverlap'
 print '======Training======'
 # load data from csv files
 train = loadtxt('data/data_'+name+'_train.csv')
@@ -16,7 +16,7 @@ X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
 Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
 
 # Carry out training, primal and/or dual
-svm = SVM(X,Y,1000)
+svm = SVM(X,Y,10)
 svm.train()
 #model = svm.train_gold()
 
@@ -33,7 +33,7 @@ plotDecisionBoundary(X, Y, predictSVM, [-1, 0, 1], title = 'SVM Train')
 
 print '======Validation======'
 # load data from csv files
-validate = loadtxt('data/data_'+name+'_validate.csv')
+validate = loadtxt('data/data_'+name+'_test.csv')
 #X = validate[:, 0:2]
 #Y = validate[:, 2:3]
 
