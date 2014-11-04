@@ -4,6 +4,9 @@ import cvxopt
 import random
 
 class SVM:
+	'''
+	http://cvxopt.org/userguide/coneprog.html#s-qp -> CVX opt documentation
+	'''
 	def __init__(self, X, Y, C):
 		self.X_train = X
 		self.Y_train = Y 
@@ -60,11 +63,22 @@ class SVM:
 		solvers.options['feastol'] = 1e-8
 		solution = solvers.qp(P, q, G, h, A, b)
 		self.alphas = self.clean_alphas(np.array(solution['x']))
-		sv = self.alphas > 1e-5
 		
-		#print self.alphas
+		num_alphas = 0
+		for a in self.alphas:
+			if a > 1e-5:
+				num_alphas += 1
+		print 'num_alphas' ,num_alphas
+
 		self.calc_w_0()
+		print 'w_0' , self.w_0
 		
+		val = np.zeros(2)
+                for i in range(0,len(self.alphas)):
+                        #print i        
+                        val += self.alphas[i] * self.Y_train[i] * self.X_train[i]
+		print 'geometric margin', 1/(val[0]*val[0] + val[1]+val[1])
+		print 'c', self.C
 		return True
 	
 	def calc_w_0(self):

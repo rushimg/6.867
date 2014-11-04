@@ -27,10 +27,12 @@ def plotDecisionBoundary(X, Y, scoreFn, values, title = ""):
     pl.axis('tight')
     # added by RMG
     pl.show()
-    #incorrect = 0
+    Y_actual = array([scoreFn(x) for x in X])
     
-    #for i in range(len(Y)):
-	#if temp[i] != Y[i]:
-	#	incorrect += 1
-    #print "%d out of %d wrong predictions" % (incorrect, len(Y))
+    correct = 0
+    
+    for i in range(len(Y)):
+	if Y_actual[i] == Y[i]:
+		correct += 1
+    print "%d out of %d correct predictions" % (correct, len(Y))
 
