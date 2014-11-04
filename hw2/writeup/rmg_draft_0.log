@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 NOV 2014 23:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  4 NOV 2014 13:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1087,7 +1087,7 @@ Overfull \hbox (88.76657pt too wide) in paragraph at lines 135--152
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -1097,10 +1097,10 @@ erlap_train.png> <./smallOverlap_test.png> <./nonsep_train.png> <./nonsep_test.
 png> <./ls_train.png> <./ls_test.png>] [3
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
  (./rmg_draft_0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `rmg_draft_0.out' has not changed.
 (rerunfilecheck)             Checksum: 639B111EEF87CC8B860813CCD1AE0231;767.
 
@@ -1122,7 +1122,7 @@ exlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on rmg_draft_0.pdf (3 pages, 475216 bytes).
+Output written on rmg_draft_0.pdf (3 pages, 475811 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

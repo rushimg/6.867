@@ -1,21 +1,27 @@
 from numpy import *
 from plotBoundary import *
+import numpy as np
 # import your LR training code
-
+from LR import LR
 # parameters
-data = 'ls'
+name= 'ls'
 print '======Training======'
 # load data from csv files
 train = loadtxt('data/data_'+name+'_train.csv')
 X = train[:,0:2]
 Y = train[:,2:3]
+X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
+Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
 
 # Carry out training.
-### TODO ###
+#L = .000001
+L = 0
+lr = LR(X,Y,L)
+lr.train()
 
 # Define the predictLR(x) function, which uses trained parameters
 ### TODO ###
-
+'''
 # plot training results
 plotDecisionBoundary(X, Y, predictLR, [0.5], title = 'LR Train')
 
@@ -27,3 +33,4 @@ Y = validate[:,2:3]
 
 # plot validation results
 plotDecisionBoundary(X, Y, predictLR, [0.5], title = 'LR Validate')
+'''
