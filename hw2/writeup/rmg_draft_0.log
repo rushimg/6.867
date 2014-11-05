@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  4 NOV 2014 13:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  5 NOV 2014 00:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1087,20 +1087,30 @@ Overfull \hbox (88.76657pt too wide) in paragraph at lines 135--152
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
-[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./svm_dual_soft.png> <./w.png> <./W_0.png> <./decision_rule.png> <./1_1_basic
-_synthetic.png>] [2 <./bigOverlap_train.png> <./bigOverlap_test.png> <./smallOv
-erlap_train.png> <./smallOverlap_test.png> <./nonsep_train.png> <./nonsep_test.
-png> <./ls_train.png> <./ls_test.png>] [3
+_synthetic.png>]
+Underfull \vbox (badness 6300) has occurred while \output is active []
+
+
+Overfull \vbox (1.15546pt too high) has occurred while \output is active []
+
+
+[2 <./bigOverlap_train.png> <./bigOverlap_test.png> <./smallOverlap_train.png> 
+<./smallOverlap_test.png> <./nonsep_train.png> <./nonsep_test.png> <./ls_train.
+png> <./ls_test.png>] [3
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
  (./rmg_draft_0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `rmg_draft_0.out' has not changed.
 (rerunfilecheck)             Checksum: 639B111EEF87CC8B860813CCD1AE0231;767.
 
@@ -1109,11 +1119,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14643 strings out of 493315
- 214888 string characters out of 6137904
+ 14646 strings out of 493315
+ 214915 string characters out of 6137904
  342366 words of memory out of 5000000
  17789 multiletter control sequences out of 15000+600000
- 46736 words of font info for 111 fonts, out of 8000000 for 9000
+ 46866 words of font info for 113 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  48i,10n,40p,818b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1122,7 +1132,7 @@ exlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
 dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on rmg_draft_0.pdf (3 pages, 475811 bytes).
+Output written on rmg_draft_0.pdf (3 pages, 475857 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

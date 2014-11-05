@@ -104,6 +104,7 @@ class SVM:
 			#print i	
 			val += self.alphas[i] * self.Y_train[i] * (np.dot(x_test.T, self.X_train[i]))
 		val += self.w_0
+		print val
 		'''decision function'''
 		if val > 0:
 			return 1

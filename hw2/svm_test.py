@@ -12,8 +12,8 @@ train = loadtxt('data/data_'+name+'_train.csv')
 X = train[:, 0:2].copy()
 Y = train[:, 2:3].copy()
 
-#X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
-#Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
+X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
+Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
 
 # Carry out training, primal and/or dual
 C = 1
@@ -38,8 +38,8 @@ validate = loadtxt('data/data_'+name+'_test.csv')
 X = validate[:, 0:2]
 Y = validate[:, 2:3]
 
-#X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
-#Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
+X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
+Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
 
 # plot validation results
 plotDecisionBoundary(X, Y, predictSVM, [-1, 0, 1], title = 'SVM Validate')
