@@ -4,14 +4,16 @@ import numpy as np
 # import your LR training code
 from LR import LR
 # parameters
-name= 'ls'
+name= 'stdev2'
 print '======Training======'
 # load data from csv files
-train = loadtxt('data/data_'+name+'_train.csv')
-#X = train[:,0:2]
-#Y = train[:,2:3]
-X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
-Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
+train = loadtxt('newData-2/data_'+name+'_train.csv')
+#train = loadtxt('data/data_'+name+'_train.csv')
+X = train[:,0:2]
+Y = train[:,2:3]
+
+#X = np.array([[1.0,2.0],[2.0,2.0],[0.0,0.0],[-2.0,3.0]])
+#Y = np.array([[1.0],[1.0],[-1.0],[-1.0]])
 
 # Carry out training.
 #L = .00000001

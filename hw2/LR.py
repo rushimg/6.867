@@ -23,22 +23,37 @@ class LR:
 	
 	def test_gold(self,x_test,model):
 		return model.predict(x_test)
+	
+	def calc_w_0(self):
+                w_0 = 0
+                for j in range(0,len(self.alphas)):
+                        inner_sum = 0
+                        for i in range(0,len(self.alphas)):
+                                inner_sum += self.alphas[i] * self.Y_train[i] * (np.dot(self.X_train[j].T, self.X_train[i]))
+                        w_0 += (self.Y_train[j]-inner_sum)
+                        #w_0 = self.Y_train[i] - val
+                w_0 = w_0/len(self.alphas)
+                self.w_0 = w_0
+                return True
 
 	def NLL(self,args):
 		X = self.X_train
 		Y = self.Y_train
 		alpha = args[0:-1]
+		#w_0 = 0
 		w_0 = args[-1]
 		summ = 0 
 		i = 0
 		for el in (self.Y_train):
-			summ += math.log(1+math.exp(-1*Y[i]*(np.dot(np.dot(X[i],X.T),alpha)+w_0)))
+			exponent = np.sum(-1*Y[i]*np.dot(self.K,alpha))+w_0
+			summ += math.log(1+math.exp(exponent))
+			#summ += math.log(1+math.exp(-1*Y[i]*(np.dot(np.dot(X[i],X.T),alpha)+w_0)))
 			#kernel = np.dot(X[i],X.T)
                         #inside = np.dot(kernel, alpha) + w_0
                         ##print inside
 			#summ += math.log(1+math.exp(np.dot(-1*Y[i],(inside))))
                         #i += 1
-		summ += self.l*np.sum(alpha)
+		#summ += self.l*np.sum(alpha)
 			#summ += math.log(1+math.exp(-1*self.Y_train[i]))
 	
 		return summ
@@ -53,14 +68,16 @@ class LR:
 		for i in range(n_samples):
     			for j in range(n_samples):
 	        		K[i,j] = self.linear_kernel(X[i], X[j])
-		self.Kernel = K
-		args = np.ones((n_samples+1))*0
+		self.K = K
+		args = [0.1]*(n_samples+1)
+		#args = np.ones((n_samples+1))*.001
 		solution = fmin_bfgs(self.NLL, args)
 
 		self.alphas = solution[0:-1]
 		print self.alphas
 		self.w_0 = solution[-1]
-		print self.w_0
+		self.calc_w_0()
+		#print self.w_0
 		num_alphas = 0
 		for a in self.alphas:
 			if a > 1e-5:
