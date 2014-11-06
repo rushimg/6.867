@@ -1,4 +1,5 @@
 import numpy as np
+
 import math
 class LR:
 	def __init__(self, X, Y, L):
@@ -14,15 +15,17 @@ class LR:
 	    	return np.exp(-linalg.norm(x-y)**2 / (2 * (sigma ** 2)))
 
 	def train_gold(self):
-		''' sklearn imlplementation to check results against '''
-		from sklearn import svm
-		y = self.Y_train
+                ''' sklearn imlplementation to check results against '''
+                import sklearn
+		from sklearn import linear_model
+
+                y = self.Y_train
                 X = self.X_train
-		model = svm.LinearSVC(C=self.C)
-		return model.fit(X,y)
-	
-	def test_gold(self,x_test,model):
-		return model.predict(x_test)
+                model = sklearn.linear_model.LogisticRegression()
+                return model.fit(X,y)
+
+        def test_gold(self,x_test,model):
+                return model.predict(x_test)
 	
 	def calc_w_0(self):
                 w_0 = 0

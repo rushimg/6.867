@@ -12,14 +12,16 @@ class SVM:
 		self.Y_train = Y 
 		self.C = C
 		#print solvers.options
-		#self.kernel = kernel
+		self.kernel = self.rbf_kernel
 
 	#linear kernel
 	def linear_kernel(self,X,X_prime):
 		return np.dot(X,X_prime)
 	
-	def rbf_kernel(x, y, sigma=5.0):
-	    	return np.exp(-linalg.norm(x-y)**2 / (2 * (sigma ** 2)))
+	def rbf_kernel(self,x, y, sigma=5.0):
+		#print 'x',x
+		#print 'y',y
+	    	return np.exp(-np.linalg.norm(x-y)**2 / (2 * (sigma ** 2)))
 
 	def train_gold(self):
 		''' sklearn imlplementation to check results against '''
@@ -43,7 +45,7 @@ class SVM:
 		K = np.zeros((n_samples, n_samples))
 		for i in range(n_samples):
     			for j in range(n_samples):
-	        		K[i,j] = self.linear_kernel(X[i], X[j])
+	        		K[i,j] = self.kernel(X[i], X[j])
 
 		P = cvxopt.matrix(np.outer(y,y) * K)
 		q = cvxopt.matrix(np.ones(n_samples) * -1)
@@ -99,12 +101,14 @@ class SVM:
 		return alphas
 	
 	def test(self, x_test):
+		#if self.kernel = self.rbf_kernel:
+		#else:
 		val = 0
 		for i in range(0,len(self.alphas)):
 			#print i	
-			val += self.alphas[i] * self.Y_train[i] * (np.dot(x_test.T, self.X_train[i]))
+			val += self.alphas[i] * self.Y_train[i] * (self.kernel(x_test.T, self.X_train[i]))
 		val += self.w_0
-		print val
+		#print val
 		'''decision function'''
 		if val > 0:
 			return 1

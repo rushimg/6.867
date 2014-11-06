@@ -19,7 +19,7 @@ Y = train[:,2:3]
 #L = .00000001
 L = 0 
 lr = LR(X,Y,L)
-lr.train()
+model = lr.train_gold()
 '''
 [[ 0.89444823  0.19756899]]
 [-0.24464889]
@@ -29,7 +29,7 @@ print model.intercept_
 '''
 # Define the predictLR(x) function, which uses trained parameters
 def predictLR(x):
-        return lr.test(x)
+        return lr.test_gold(x, model)
 
 # plot training results
 plotDecisionBoundary(X, Y, predictLR, [0.5], title = 'LR Train')
