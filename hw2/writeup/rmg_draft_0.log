@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  6 NOV 2014 20:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  6 NOV 2014 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -681,4 +681,586 @@ File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00B1 (decimal 177)
    defining Unicode char U+00B2 (decimal 178)
    defining Unicode char U+00B3 (decimal 179)
-   defining Unicode 
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+)
+\symgreek=\mathgroup6
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks28
+\ex@=\dimen148
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/SIunits/SIunits.cfg)
+Option `squaren' provided!
+)) (/usr/local/texlive/2013/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box30
+\UL@hyphenbox=\box31
+\UL@skip=\skip66
+\UL@hook=\toks29
+\UL@height=\dimen149
+\UL@pe=\count120
+\UL@pixel=\dimen150
+\ULC@box=\box32
+Package: ulem 2012/05/18
+\ULdepth=\dimen151
+)
+(./rmg_draft_0.aux
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `overflow' multiply defined.
+
+
+LaTeX Warning: Label `table:formatting' multiply defined.
+
+)
+\openout1 = `rmg_draft_0.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 6.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 6.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count121
+\scratchdimen=\dimen152
+\scratchbox=\box33
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen153
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks31
+)
+\big@size=\dimen154
+LaTeX Info: Redefining \microtypecontext on input line 6.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=505.89pt
+* \textheight=650.43001pt
+* \oddsidemargin=-18.06749pt
+* \evensidemargin=-18.06749pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=46.97505pt
+* \marginparsep=10.0pt
+* \columnsep=18.06749pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring ON on input line 6.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count127
+)
+LaTeX Info: Redefining \ref on input line 6.
+LaTeX Info: Redefining \pageref on input line 6.
+LaTeX Info: Redefining \nameref on input line 6.
+
+(./rmg_draft_0.out) (./rmg_draft_0.out)
+\@outlinefile=\write3
+\openout3 = `rmg_draft_0.out'.
+
+
+Option `squaren' provided! 
+ Command \squaren defined by SIunits package!
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 11
+.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `ztmcm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 11
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 11
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 11
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 11.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/microtype/mt-eur.cfg
+File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
+)
+
+LaTeX Warning: No \author given.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
+<svm_dual_soft.png, id=44, 610.28pt x 176.66pt>
+File: svm_dual_soft.png Graphic file (type png)
+ <use svm_dual_soft.png>
+Package pdftex.def Info: svm_dual_soft.png used on input line 19.
+(pdftex.def)             Requested size: 199.16928pt x 57.65372pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+
+<w.png, id=45, 216.81pt x 59.22125pt>
+File: w.png Graphic file (type png)
+ <use w.png>
+Package pdftex.def Info: w.png used on input line 27.
+(pdftex.def)             Requested size: 85.35826pt x 23.31577pt.
+
+<W_0.png, id=46, 446.66875pt x 101.37875pt>
+File: W_0.png Graphic file (type png)
+ <use W_0.png>
+Package pdftex.def Info: W_0.png used on input line 32.
+(pdftex.def)             Requested size: 170.71652pt x 38.74707pt.
+
+<decision_rule.png, id=47, 304.13625pt x 75.28125pt>
+File: decision_rule.png Graphic file (type png)
+ <use decision_rule.png>
+Package pdftex.def Info: decision_rule.png used on input line 39.
+(pdftex.def)             Requested size: 113.81102pt x 28.17065pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
+
+Overfull \hbox (8.22827pt too wide) in paragraph at lines 46--60
+ [][] 
+ []
+
+LaTeX Font Info:    Try loading font information for T1+phv on input line 60.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.32993pt on input line 60.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `phv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 60.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.32993pt on input line 60.
+
+<1_1_basic_synthetic.png, id=48, 591.20876pt x 432.61626pt>
+File: 1_1_basic_synthetic.png Graphic file (type png)
+
+<use 1_1_basic_synthetic.png>
+Package pdftex.def Info: 1_1_basic_synthetic.png used on input line 66.
+(pdftex.def)             Requested size: 170.71652pt x 124.9208pt.
+
+<stdev1_train.png, id=49, 579.16376pt x 444.66125pt>
+File: stdev1_train.png Graphic file (type png)
+ <use stdev1_train.png>
+Package pdftex.def Info: stdev1_train.png used on input line 79.
+(pdftex.def)             Requested size: 170.71652pt x 131.06537pt.
+
+<stdev1_test.png, id=50, 566.115pt x 435.6275pt>
+File: stdev1_test.png Graphic file (type png)
+ <use stdev1_test.png>
+Package pdftex.def Info: stdev1_test.png used on input line 86.
+(pdftex.def)             Requested size: 170.71652pt x 131.36726pt.
+
+<stdev2_train.png, id=51, 573.14125pt x 446.66875pt>
+File: stdev2_train.png Graphic file (type png)
+ <use stdev2_train.png>
+Package pdftex.def Info: stdev2_train.png used on input line 93.
+(pdftex.def)             Requested size: 170.71652pt x 133.04747pt.
+
+<stdev2_test.png, id=52, 584.1825pt x 444.66125pt>
+File: stdev2_test.png Graphic file (type png)
+ <use stdev2_test.png>
+Package pdftex.def Info: stdev2_test.png used on input line 100.
+(pdftex.def)             Requested size: 170.71652pt x 129.94585pt.
+
+<nonSep2_train.png, id=53, 589.20125pt x 449.68pt>
+File: nonSep2_train.png Graphic file (type png)
+ <use nonSep2_train.png>
+Package pdftex.def Info: nonSep2_train.png used on input line 107.
+(pdftex.def)             Requested size: 170.71652pt x 130.2872pt.
+
+<nonSep2_test.png, id=54, 559.08875pt x 437.635pt>
+File: nonSep2_test.png Graphic file (type png)
+ <use nonSep2_test.png>
+Package pdftex.def Info: nonSep2_test.png used on input line 114.
+(pdftex.def)             Requested size: 170.71652pt x 133.62872pt.
+
+<stdev4_train.png, id=55, 576.1525pt x 444.66125pt>
+File: stdev4_train.png Graphic file (type png)
+ <use stdev4_train.png>
+Package pdftex.def Info: stdev4_train.png used on input line 121.
+(pdftex.def)             Requested size: 170.71652pt x 131.75743pt.
+
+<stdev4_test.png, id=56, 572.1375pt x 441.65pt>
+File: stdev4_test.png Graphic file (type png)
+ <use stdev4_test.png>
+Package pdftex.def Info: stdev4_test.png used on input line 128.
+(pdftex.def)             Requested size: 170.71652pt x 131.78168pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./svm_dual_soft.png> <./w.png> <./W_0.png> <./decision_rule.png> <./1_1_basic
+_synthetic.png>] [2 <./stdev1_train.png> <./stdev1_test.png> <./stdev2_train.pn
+g> <./stdev2_test.png> <./nonSep2_train.png> <./nonSep2_test.png> <./stdev4_tra
+in.png> <./stdev4_test.png>]
+Overfull \hbox (11.73698pt too wide) in paragraph at lines 184--211
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<stdev1_gauss_train.png, id=85, 571.13374pt x 446.66875pt>
+File: stdev1_gauss_train.png Graphic file (type png)
+
+<use stdev1_gauss_train.png>
+Package pdftex.def Info: stdev1_gauss_train.png used on input line 285.
+(pdftex.def)             Requested size: 170.71652pt x 133.51093pt.
+
+<stdev1_gauss_test.png, id=86, 593.21625pt x 459.7175pt>
+File: stdev1_gauss_test.png Graphic file (type png)
+
+<use stdev1_gauss_test.png>
+Package pdftex.def Info: stdev1_gauss_test.png used on input line 292.
+(pdftex.def)             Requested size: 170.71652pt x 132.29752pt.
+ [3] <nll.png, id=97, 415.5525pt x 85.31876pt>
+File: nll.png Graphic file (type png)
+
+<use nll.png>
+Package pdftex.def Info: nll.png used on input line 304.
+(pdftex.def)             Requested size: 199.16928pt x 40.89264pt.
+ <stdev1_lr_train.png, id=98, 572.1375pt x 433.62pt>
+File: stdev1_lr_train.png Graphic file (type png)
+
+<use stdev1_lr_train.png>
+Package pdftex.def Info: stdev1_lr_train.png used on input line 311.
+(pdftex.def)             Requested size: 170.71652pt x 129.38565pt.
+
+<stdev1_lr_test.png, id=99, 565.11125pt x 436.63126pt>
+File: stdev1_lr_test.png Graphic file (type png)
+
+<use stdev1_lr_test.png>
+Package pdftex.def Info: stdev1_lr_test.png used on input line 318.
+(pdftex.def)             Requested size: 170.71652pt x 131.90314pt.
+
+<sdev2_lr_train.png, id=100, 577.15625pt x 434.62375pt>
+File: sdev2_lr_train.png Graphic file (type png)
+
+<use sdev2_lr_train.png>
+Package pdftex.def Info: sdev2_lr_train.png used on input line 324.
+(pdftex.def)             Requested size: 170.71652pt x 128.55774pt.
+ <stdev2_lr_test.png, id=101, 586.19pt x 443.6575pt>
+File: stdev2_lr_test.png Graphic file (type png)
+
+<use stdev2_lr_test.png>
+Package pdftex.def Info: stdev2_lr_test.png used on input line 331.
+(pdftex.def)             Requested size: 170.71652pt x 129.20572pt.
+
+Overfull \hbox (12.59686pt too wide) in paragraph at lines 338--351
+ [][] 
+ []
+
+[4 <./stdev1_gauss_train.png> <./stdev1_gauss_test.png> <./nll.png> <./stdev1_l
+r_train.png> <./stdev1_lr_test.png> <./sdev2_lr_train.png> <./stdev2_lr_test.pn
+g>] <stdev1_rbf_lr_train_5.png, id=114, 541.02126pt x 427.5975pt>
+File: stdev1_rbf_lr_train_5.png Graphic file (type png)
+
+<use stdev1_rbf_lr_train_5.png>
+Package pdftex.def Info: stdev1_rbf_lr_train_5.png used on input line 408.
+(pdftex.def)             Requested size: 170.71652pt x 134.92229pt.
+
+<stdev1_rbf_lr_test_5.png, id=115, 563.10374pt x 439.6425pt>
+File: stdev1_rbf_lr_test_5.png Graphic file (type png)
+
+<use stdev1_rbf_lr_test_5.png>
+Package pdftex.def Info: stdev1_rbf_lr_test_5.png used on input line 414.
+(pdftex.def)             Requested size: 170.71652pt x 133.2824pt.
+ <nll_mc.png, id=116, 559.08875pt x 72.27pt>
+File: nll_mc.png Graphic file (type png)
+
+<use nll_mc.png>
+Package pdftex.def Info: nll_mc.png used on input line 425.
+(pdftex.def)             Requested size: 199.16928pt x 25.74478pt.
+ [5 <./stdev1_rbf_lr_train_5.png> <./stdev1_rbf_lr_test_5.png> <./nll_mc.png>]
+Overfull \hbox (123.71642pt too wide) in paragraph at lines 432--455
+ [][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 461.
+[6
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 461.
+ (./rmg_draft_0.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 461.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 461.
+Package rerunfilecheck Info: File `rmg_draft_0.out' has not changed.
+(rerunfilecheck)             Checksum: EA3E44CE07C1FF41FDA8739E7756B936;898.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14780 strings out of 493315
+ 216855 string characters out of 6137904
+ 350358 words of memory out of 5000000
+ 17833 multiletter control sequences out of 15000+600000
+ 51270 words of font info for 151 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 48i,10n,40p,1169b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on rmg_draft_0.pdf (6 pages, 1069027 bytes).
+PDF statistics:
+ 167 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 24772 words of extra memory for PDF output out of 24883 (max. 10000000)
+

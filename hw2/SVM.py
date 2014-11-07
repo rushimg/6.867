@@ -18,7 +18,7 @@ class SVM:
 	def linear_kernel(self,X,X_prime):
 		return np.dot(X,X_prime)
 	
-	def rbf_kernel(self,x, y, sigma=5.0):
+	def rbf_kernel(self,x, y, sigma=1.0):
 		#print 'x',x
 		#print 'y',y
 	    	return np.exp(-np.linalg.norm(x-y)**2 / (2 * (sigma ** 2)))

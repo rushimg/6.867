@@ -362,22 +362,16 @@ If the data is linearly separable then the optimization will want to make the we
 
   \textbf{Stdev1} 	 & 0\%  &400\\
  \hline
-  \textbf{Stdev1} 	 &0.0001\% &400\%  \\
+  \textbf{Stdev1} 	 &0.0001\% &400  \\
  \hline
   \textbf{Stdev1} 	&0.001 &400  \\
  \hline
-   \textbf{Stdev1} 	&0.01 &400  \\
+   \textbf{Stdev2} 	 & 0\%  &400\\
  \hline
-  \textbf{Stdev1} 	&0.1 &50.0\% & 50.0\%  \\
+  \textbf{Stdev2} 	 &0.0001\% &400  \\
  \hline
-  \textbf{Stdev1} 	&1 &50.0\% &50.0\%  \\
+  \textbf{Stdev2} 	&0.001 &400  \\
  \hline
-  \textbf{Stdev2} 	&1.0 &50.0\% &50.0\%  \\
- \hline
-  \textbf{Stdev2} 	&2.0 &10.75\% &9.75\%  \\
-   \hline
-  \textbf{Stdev2} 	&2.0 &10.75\% &8.00\%  \\
-  
  \hline
  \end{tabular}
   \caption{Number of Alphas vs. Lambda}
@@ -392,17 +386,36 @@ If the data is linearly separable then the optimization will want to make the we
      \textbf{DataSet}  & \textbf{1/Bandwidth} &\textbf{Train Error} & \textbf{Test Error}\\
     \hline
     \hline
- \textbf{Stdev1} 	   &400 &0.0\% & 0.0\%\\
+ \textbf{Stdev1} 	   &10 &1.75000\% & 0.75000\%\\
  \hline
-  \textbf{Stdev1} 	   &400 &0.0\% & 0.0\%\\
+  \textbf{Stdev1} 	   &5 &0.0\% & 0.0\%\\
  \hline
-  \textbf{Stdev1} 	   &400 &0.0\% & 0.0\%\\
+  \textbf{Stdev1} 	   &1 &0.0\% & 0.25000\%\\
  \hline
-
+ \textbf{Stdev2} 	   &10 &50.00\% & 50.00\%\\
+ \hline
+  \textbf{Stdev2} 	   &5 &10.25000\% & 8.25000\%\\
+ \hline
+  \textbf{Stdev2} 	   &1 &50.00\% & 50.00\%\\
+ \hline
   \end{tabular}
   \caption{1/Bandwidth vs. Train and Test Error for RBF Kernel}
   \label{table:formatting}
 \end{table}
+Table 9 shows the logistic regression with various bandwidths. A beta value of 2 achieves the best score on both datasets. Figure 17 and 18 show the RBF kernel with B=0.2 for the dataset stdv2. Similarly to the SVM the RBF kernel has more flexibly as compared to the linear kernel, so if tuned right can often achieve better performance. 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{stdev1_rbf_lr_train_5}
+\caption{StDev1 Logistic Regression RBF(B=.2)  Training}
+\label{overflow}
+\end{figure}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{stdev1_rbf_lr_test_5}
+\caption{StDev1 Logistic Regression RBF(B=.2) Testing}
+\label{overflow}
+\end{figure}
+We can see that the SVM has much higher sparsity on alphas. The logistic regression model has a much higher number of alphas for the same dataset. This is due to the fact that the logistic regression model wants to increase the weights and therefore has more alphas greater than zero. Adding in a regularization term lessens the effect of large weights in the LR model but still does not reach the levels of sparsity as the SVM. The SVM model and the LR model do not select the same support vectors. Comparing at table 3 and at table 7 we can see that the SVM and the LR models preform almost equivalently well on the dataset. Due to the fact that LR is a discriminative model it does not converge on the non separable dataset. LR tries discriminate between the two classes and in that scenario it can not accomplish its objective and does not produce an output. A generative model such as Linear Discriminant Analysis will still provide a decision boundary even when the data are not linearly separable.
 
 \section{Multi-Class Classification}
 In the final section, we investigate multi-class classification for both SVM and logistic regression. SVMs are inherently binary classifiers. In order to expand them to be used in multiple class classification we must use a series of individual binary classifiers. There are a few approaches using this method, but we will focus on the one vs. rest approach. For this classifier we create K classifiers (where K is the number of classes) and classify each point as belonging to one class or belonging to the remainder of classes, and repeat this for all K-classes. Then for each point we take the class that gives it the highest score and classify it as belonging to that class. Although this classifier has its faults, such as uneven distributions when comparing one class to the remainder of the classes, it is efficient for large data sets.\\
