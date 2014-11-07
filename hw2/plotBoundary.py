@@ -8,7 +8,7 @@ import pylab as pl
 # values is a list of values to plot
 
 def plotDecisionBoundary(X, Y, scoreFn, values, title = ""):
-    '''
+      
     # Plot the decision boundary. For that, we will asign a score to
     # each point in the mesh [x_min, m_max]x[y_min, y_max].
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
@@ -28,13 +28,13 @@ def plotDecisionBoundary(X, Y, scoreFn, values, title = ""):
     pl.axis('tight')
     # added by RMG
     pl.show()
-    '''
+    
     Y_actual = array([scoreFn(x) for x in X])
     
-    correct = 0
+    incorrect = 0
     
     for i in range(len(Y)):
-	if Y_actual[i] == Y[i]:
-		correct += 1
-    print "%d out of %d correct predictions" % (correct, len(Y))
+	if Y_actual[i] != Y[i]:
+		incorrect += 1
+    print "%2.5f Error Rate Percent" % (100*(float(incorrect)/len(Y)))
 

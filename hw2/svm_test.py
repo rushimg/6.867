@@ -4,7 +4,7 @@ from SVM import SVM
 import numpy as np
 
 # parameters
-name = 'stdev2'
+name = 'stdev1'
 print '======Training======'
 # load data from csv files
 train = loadtxt('newData-2/data_'+name+'_train.csv')

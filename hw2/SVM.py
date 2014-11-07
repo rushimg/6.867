@@ -2,7 +2,7 @@ import numpy as np
 from cvxopt import matrix, solvers
 import cvxopt
 import random
-
+import math
 class SVM:
 	'''
 	http://cvxopt.org/userguide/coneprog.html#s-qp -> CVX opt documentation
@@ -76,10 +76,11 @@ class SVM:
 		print 'w_0' , self.w_0
 		
 		val = np.zeros(2)
-                for i in range(0,len(self.alphas)):
+		for i in range(0,len(self.alphas)):
                         #print i        
                         val += self.alphas[i] * self.Y_train[i] * self.X_train[i]
-		print 'geometric margin', 1/(val[0]*val[0] + val[1]+val[1])
+		print 'geometric margin', 1/math.sqrt(val[0]*val[0] + val[1]*val[1])
+		print 'w', val[0] , val[1]
 		print 'c', self.C
 		return True
 	

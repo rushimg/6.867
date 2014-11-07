@@ -13,7 +13,7 @@
 
 
 \section{Support Vector Machine Classification}
-In this section of the homework we explore the use of support vector machines(SVM) for use in the task of classification. We will focus on implementing the SVM dual optimization problem. Additionally, we will implement the soft-margin SVM which contains a slack variable to allow for data points to be on the incorrect side of the decision boundary with some amount of tolerance. This soft margin allows us to classify points even in the situation when there is no linear separation between classes. This slack is parameterized by the variable C. As C increases the SVM approaches a hard-margin.The complete optimization problem that we seek to solve is shown below.
+In this section of we explore the use of support vector machines(SVM) for use in the task of classification. We will focus on implementing the SVM dual optimization problem. Additionally, we will implement the soft-margin SVM which contains a slack variable to allow for data points to be on the incorrect side of the decision boundary with some amount of tolerance. This soft margin allows us to classify points even in the situation when there is no linear separation between classes. This slack is parameterized by the variable C. As C increases the SVM approaches a hard-margin.The complete optimization problem that we seek to solve is shown below.
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=70mm]{svm_dual_soft}
@@ -68,63 +68,65 @@ In this section we test our implementation of the soft-margin SVM using the synt
 \label{overflow}
 \end{figure}
 
-Notice here that none of our $alpha$\ values are zero, yet the data should have produced only three support vectors not four. The model creates a support vector of the point furthest to the right, which is should not; this point should not affect the decision boundary. The value of alpha for this point is very low at 3.11022745e-08. We decided to threshold all alpha values at 1e-5; anything below this value is set to zero.
+Notice here that none of our $alpha$\ values are zero, yet the data should have produced only three support vectors not four. The model creates a support vector of the point furthest to the right, which it should not; this point should not affect the decision boundary. The value of alpha for this point is very low at 3.11022745e-08. We decided to threshold all alpha values at 1e-5; anything below this value is set to zero.
 
 \subsection{}
-C = 1 \\
+In this section we test our classifier on the four given datasets, and observe the decision boundary and the classification error rate on the training and validation test sets. For all trials in this section hold the value of C equal to one. In all trails the training and the testing data contained 400 data points each. 
+Figures 2 through 9 show the decision boundaries and the classes for each point in the training and testing set. Table 2 and 3 shows the number of support vectors, the values for W\_0 and W as well as the training and testing error for each dataset.
+
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{bigOverlap_train}
-\caption{BigOverlap Data Training}
+\includegraphics[width=60mm]{stdev1_train}
+\caption{StDev1 Data Training}
 \label{overflow}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{bigOverlap_test}
-\caption{BigOverlap Data Testing}
+\includegraphics[width=60mm]{stdev1_test}
+\caption{StDev1 Data Testing}
 \label{overflow}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{smallOverlap_train}
-\caption{SmallOverlap Data Training}
+\includegraphics[width=60mm]{stdev2_train}
+\caption{StDev2 Data Training}
 \label{overflow}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{smallOverlap_test}
-\caption{SmallOverlap Data Testing}
+\includegraphics[width=60mm]{stdev2_test}
+\caption{StDev2 Data Testing}
 \label{overflow}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{nonsep_train}
-\caption{Nonsep Data Training}
+\includegraphics[width=60mm]{nonSep2_train}
+\caption{NonSep2 Data Training}
 \label{overflow}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{nonsep_test}
-\caption{Nonsep Data Testing}
+\includegraphics[width=60mm]{nonSep2_test}
+\caption{NonSep2 Data Testing}
 \label{overflow}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{ls_train}
-\caption{LS Data Training}
+\includegraphics[width=60mm]{stdev4_train}
+\caption{StDev4 Data Training}
 \label{overflow}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=60mm]{ls_test}
-\caption{LS Data Testing}
+\includegraphics[width=60mm]{stdev4_test}
+\caption{StDev4 Data Testing}
 \label{overflow}
 \end{figure}
 
@@ -134,52 +136,314 @@ C = 1 \\
   \centering
   \begin{tabular}{llllll|}
     \hline
-     \textbf{Data} &\textbf{LS}  & \textbf{Nonsep}  & \textbf{smallOverlap} & \textbf{bigOverlap}\\
+     \textbf{DataSet} &\textbf{\# S.V.}  & \textbf{W\_0}  & \textbf{W} \\
     \hline
     \hline
- \textbf{\# Support Vectors} 	&13 &394 &50   &129\%\\
+ \textbf{Stdev1} 	&5 &0.011 &1.233, 1.241  \\
  \hline
-\textbf{W}	&-1.94, 2.58 	&  -0.11, -0.51 & 1.12, 1.20 & 0.39, 0.35 \\
+\textbf{Stdev2}	&91 	& 0.017 & 0.457, 0.755  \\
  \hline
-\textbf{W\_0}	&0.02	&0.61 &-2.36 &-0.70 \\
+\textbf{nonSep2}	&392 &0.005	 &-0.219, -0.211  \\
  \hline
-\textbf{Error Train}	&0.00\% 	&0.503\% &0.09\% &0.275\%\\
+\textbf{Stdev4}	&243 	&-0.006 &0.199, 0.182 \\
  \hline
- \textbf{Error Test}	&0.0037\% 	&0.503\% &0.09\% &0.085\%\\
- \hline
+ \end{tabular}
+  \caption{Number of Support Vectors, Weight vector and W\_0 vector for various datasets}
+  \label{table:formatting}
+\end{table}
 
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{DataSet}  & \textbf{Train Error} & \textbf{Test Error}\\
+    \hline
+    \hline
+ \textbf{Stdev1} 	   &0.0\% & 0.5\%\\
+ \hline
+\textbf{Stdev2}	 & 9.5\% &8.0\% \\
+ \hline
+\textbf{nonSep2}	 &48.5\% &50.25\% \\
+ \hline
+\textbf{Stdev4}	 &26.5\% & 21.5\%\\
+ \hline
+ 
   \end{tabular}
-  \caption{Number of Support Vectors, Weight vector, W\_0 vector and accuracy for various datasets}
+  \caption{Classification Error for various datasets}
+  \label{table:formatting}
+\end{table}
+
+Visually if we observe the figures we can see that nonSep2 is not linearly separable and therefore achieves poor performance. As the data in sac class overlap more and more a linear decision boundary becomes more difficult to define. Stdev1, 2 and 4 are increasingly difficult to linearly separate and therefore achieve higher and higher errors.  Defining a separation boundary for any of these datasets other than Stdev1 is impossible with the hard margin SVM. Looking at table 2 and 3we see that as error increases so do the number of support vectors. This is due to the fact that as the data becomes more difficult to separate linearly, the number of support vectors increases so that more of the points define the decision boundary.
+
+\subsection{}
+In this section we extend our SVM dual implementation to operate with kernels. Table 4 shows the number of support vectors, and geometric margin for various values of C. We can see that as we increase C the number of support vectors decreases. This is due to the fact that as C increases we approach the hard margin SVM problem in which the boundary depends on less points. As C increases the value for the geometric margin decreases. This is due to the fact that as C increases we approach the hard margin SVM problem in which the margin is small. The value of C typically changes the resulting classifier and therefore affects the accuracy on the test samples. However, Maximizing the geometric margin on the training set would not be an appropriate criterion for selecting C, due to the fact that this will lead to overfitting. The resultant classifier would be very well tailored to the training set but would not generalize well to future unseen data. As an alternative we could find the optimal value of C on a validation set separate from the training set and then apply this model to a new testing set, alleviating the problem of overfitting. 
+Table 5 shows the training and testing errors vs. C for two of the datasets. We can see that changing C does not have a drastic impact on the error for these two datasets.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{DataSet} &\textbf{\# C}  & \textbf{Number of alphas}  & \textbf{Geometric Margin} \\
+    \hline
+    \hline
+ \textbf{Stdev1} 	&0.01 &52 &1.65  \\
+ \hline
+  \textbf{Stdev1} 	&0.1 &16 & 1.05  \\
+ \hline
+  \textbf{Stdev1} 	&1.0 &5 &0.57  \\
+ \hline
+  \textbf{Stdev1} 	&10 &3 &0.44  \\
+ \hline
+  \textbf{Stdev1} 	&100 &3 &0.44  \\
+ \hline
+  \textbf{Stdev4} 	&0.01 &249 & 3.89  \\
+ \hline
+  \textbf{Stdev4} 	&0.1 &243 &3.70  \\
+ \hline
+  \textbf{Stdev4} 	&1.0 &243 &3.70  \\
+ \hline
+  \textbf{Stdev4} 	&10 &256 &3.70  \\
+ \hline
+  \textbf{Stdev4} 	&100 &400 &3.70  \\
+ \hline
+ 
+ \end{tabular}
+  \caption{Number of Alphas and Geometric Margin vs C values for datasets}
+  \label{table:formatting}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{DataSet} &\textbf{\# C}  & \textbf{Train Error}  & \textbf{Test Error} \\
+    \hline
+    \hline
+ \textbf{Stdev1} 	&0.01 &0.0\% & 0.0\%  \\
+ \hline
+  \textbf{Stdev1} 	&0.1 &0.00\% & 0.05\%  \\
+ \hline
+  \textbf{Stdev1} 	&1.0 &0.00\% &0.5\%  \\
+ \hline
+  \textbf{Stdev1} 	&10 &0.00\% &0.00\%  \\
+ \hline
+  \textbf{Stdev1} 	&100 &0.00\% &0.00\%  \\
+ \hline
+  \textbf{Stdev4} 	&0.01 &26.0\% & 21.75\%  \\
+ \hline
+  \textbf{Stdev4} 	&0.1 &26.50\% &21.50\%  \\
+ \hline
+  \textbf{Stdev4} 	&1.0 &26.50\% &21.50\%  \\
+ \hline
+  \textbf{Stdev4} 	&10 &26.0\% & 21.75\%  \\
+ \hline
+  \textbf{Stdev4} 	&100 &26.0\% & 21.75\%  \\
+ \hline
+ 
+ \end{tabular}
+  \caption{Training and Testing Error vs. C values for datasets}
   \label{table:formatting}
 \end{table}
 
 
-\subsection{Problem 1.3}
-C vs. geometric margin and alphas 
-Beta and some RBF pictures
-Try and show the margin on the linear classifier
-validate against gold
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{DataSet} &\textbf{\# 1/Bandwidth}  & \textbf{Train Error}  & \textbf{Test Error} \\
+    \hline
+    \hline
+
+  \textbf{Stdev1} 	&0.25 &50.0\% & 50.0\%  \\
+ \hline
+  \textbf{Stdev1} 	&0.5 &0.00\% &2.25\%  \\
+ \hline
+  \textbf{Stdev1} 	&1.0 &0.00\% &0.25\%  \\
+ \hline
+   \textbf{Stdev1} 	&2.0 &0.00\% &0.25\%  \\
+ \hline
+  \textbf{Stdev2} 	&0.25 &50.0\% & 50.0\%  \\
+ \hline
+  \textbf{Stdev2} 	&0.5 &50.0\% &50.0\%  \\
+ \hline
+  \textbf{Stdev2} 	&1.0 &50.0\% &50.0\%  \\
+ \hline
+  \textbf{Stdev2} 	&2.0 &10.75\% &9.75\%  \\
+   \hline
+  \textbf{Stdev2} 	&2.0 &10.75\% &8.00\%  \\
+  
+ \hline
+ \end{tabular}
+  \caption{Training and Testing Error For Gaussian Kernel vs. 1/Bandwidth for datasets (C = 1)}
+  \label{table:formatting}
+\end{table}
+
+Table 6 shows the training and testing error for two datasets as we vary the value 1/bandwidth. We can see that for dataset Stdev1 a value of 1.0 and for Stdev a value of 2 for 1/bandwidth provide excellent results. For all trials in table 6 the value of C was held constant to one. Figures 10 and 11 show the decision boundaries for training and testing for the Stdev1 dataset. We can see here that the RBF kernel is much more flexible than the linear kernel and in some cases may be able to provide for better classification.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{stdev1_gauss_train}
+\caption{StDev1 RBF Training}
+\label{overflow}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{stdev1_gauss_test}
+\caption{StDev1 RBF Kernel Testing}
+\label{overflow}
+\end{figure}
+
+
 \section{Logistic Regression}
-\section{Multi-Class Classification}
 
+In this section we explore Logistic Regression for binary classification. Logistic regression is a discriminative model, where we are not making any distributional assumptions about X but rather only interested in the decision boundary. In logistic regression we look to minimize the following negative log likelihood shown in figure 12. Additionally we are interested in the kerneled version of logistic regression. To achieve this we simply substitute $W=X^{T}\alpha$\ .This allows us to represent the weight vector in terms of X and alphas. If we now look at the exponential term we see  $X^{i}X^{T}$\ which represents the kernelized form. To implement this optimization we utilized the scipy.optimize package, specifically the fmin\_bfgs function relating to the BFGS optimization algorithm. 
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=70mm]{nll}
+\caption{Logistic Regression Optimization}
+\end{figure}
+If the data is linearly separable then the optimization will want to make the weights as large as possible. To alleviate this we add a L1 regularization term around alpha. 
 
-\end{document}
-
-Big overlap\\
-Train:\\
-w\_0 [-0.7048107]\\
-w [ 0.39458465  0.35642887]\\
-
-smallOverlap\\
-w\_0 [-2.34573384]\\
-w [ 1.21145957  1.2035711 ]\\
-
-ls\\
-w\_0 [ 0.01515202]\\
-w [-1.94346637  2.57834618]\\
-
-nonsep\\
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{stdev1_lr_train}
+\caption{StDev1 Logistic Regression Training}
+\label{overflow}
+\end{figure}
+\subsection{}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{stdev1_lr_test}
+\caption{StDev1 Logistic Regression Testing}
+\label{overflow}
+\end{figure}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{sdev2_lr_train}
+\caption{StDev2 Logistic Regression Training}
+\label{overflow}
+\end{figure}
+\subsection{}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{stdev2_lr_test}
+\caption{StDev2 Logistic Regression Testing}
+\label{overflow}
+\end{figure}
 
 \begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{DataSet}  & \textbf{Number of Alphas} &\textbf{Train Error} & \textbf{Test Error}\\
+    \hline
+    \hline
+ \textbf{Stdev1} 	   &400 &0.0\% & 0.0\%\\
+ \hline
+\textbf{Stdev2}	 &400 & 9.5\% &6.25\% \\
+ \hline
+\textbf{Stdev4}	 &400 &26.5\% & 24.0\%\\
+ \hline
+ 
+  \end{tabular}
+  \caption{Classification Error for various datasets}
+  \label{table:formatting}
+\end{table}
+\subsection{}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{DataSet} &\textbf{\# Lambda}  & & \textbf{Number of Alphas} \\
+    \hline
+    \hline
+
+  \textbf{Stdev1} 	 & 0\%  &400\\
+ \hline
+  \textbf{Stdev1} 	 &0.0001\% &400\%  \\
+ \hline
+  \textbf{Stdev1} 	&0.001 &400  \\
+ \hline
+   \textbf{Stdev1} 	&0.01 &400  \\
+ \hline
+  \textbf{Stdev1} 	&0.1 &50.0\% & 50.0\%  \\
+ \hline
+  \textbf{Stdev1} 	&1 &50.0\% &50.0\%  \\
+ \hline
+  \textbf{Stdev2} 	&1.0 &50.0\% &50.0\%  \\
+ \hline
+  \textbf{Stdev2} 	&2.0 &10.75\% &9.75\%  \\
+   \hline
+  \textbf{Stdev2} 	&2.0 &10.75\% &8.00\%  \\
+  
+ \hline
+ \end{tabular}
+  \caption{Number of Alphas vs. Lambda}
+  \label{table:formatting}
+\end{table}
+
+\subsection{}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{DataSet}  & \textbf{1/Bandwidth} &\textbf{Train Error} & \textbf{Test Error}\\
+    \hline
+    \hline
+ \textbf{Stdev1} 	   &400 &0.0\% & 0.0\%\\
+ \hline
+  \textbf{Stdev1} 	   &400 &0.0\% & 0.0\%\\
+ \hline
+  \textbf{Stdev1} 	   &400 &0.0\% & 0.0\%\\
+ \hline
+
+  \end{tabular}
+  \caption{1/Bandwidth vs. Train and Test Error for RBF Kernel}
+  \label{table:formatting}
+\end{table}
+
+\section{Multi-Class Classification}
+In the final section, we investigate multi-class classification for both SVM and logistic regression. SVMs are inherently binary classifiers. In order to expand them to be used in multiple class classification we must use a series of individual binary classifiers. There are a few approaches using this method, but we will focus on the one vs. rest approach. For this classifier we create K classifiers (where K is the number of classes) and classify each point as belonging to one class or belonging to the remainder of classes, and repeat this for all K-classes. Then for each point we take the class that gives it the highest score and classify it as belonging to that class. Although this classifier has its faults, such as uneven distributions when comparing one class to the remainder of the classes, it is efficient for large data sets.\\
+Unlike SVMs, logistic regression is more easily extended to a multi-class classifier. Figure 15 shows the optimization objective for multi-class logistic regression. Unlike SVMs we can change the objective to extend to multi class rather than using multiple classifiers.\\
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=70mm]{nll_mc}
+\caption{Logistic Regression Multiclass Optimization}
+\end{figure}
+We test our implementations of the multi-class versions of SVMs and Logistic Regression on the Kaggle Dataset provided. Due to the extremely large size of the Kaggle dataset and the fact that our code has not been optimized for efficiency, we use a subset of the Kaggle Dataset to test on. We use 800 randomly selected data points for training and another 800 for testing. The Kaggle dataset contains 54 feature X values and 7 classes. 
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llllll|}
+    \hline
+     \textbf{was } &\textbf{Error Train 1} & \textbf{Error Test 1} &\textbf{Error Train 2 }  & \textbf{Error Test 2}\\
+    \hline
+    \hline
+
+  \textbf{SVM Linear} 	 & 19\%  &53.5\% &45.75\% &66.25\% &\\
+ \hline
+  \textbf{SVM RBF(B=.2)} 	 &54.25\% &77.75\% &38\% &38\%  \\
+ \hline
+
+   \textbf{SVM RBF(B=1)} 	&54.25\% &77.75\% & &   \\
+ \hline
+    \textbf{SVM RBF(B=.1)} 	&82.00\% &82.50\%  & &   \\
+ \hline
+ 
+   \textbf{LR Linear} 	 &34\% &55.2\% &54\%  & 54\% \\
+ \hline
+  \textbf{LR RBF(B=.2)} 	 &68\% &51.25\% \%  \\
+ \hline
+
+
+ \end{tabular}
+  \caption{Errors for various SVM and LR on Kaggle Dataset}
+  \label{table:formatting}
+\end{table}
+Note: due to the long runtimes, occasionally tests on data set 2 were excluded to allow for more implementations to be tried. 
+Overall I found that the SVM multi-class outperformed the multi-class Logistic Regression. Due to the fact that only 800 points were used for training and testing each in each set, this does not give any conclusive evidence of the entire dataset. Additionally the 800 points contained all 7 classes thus allowing for a small amount of data comparatively about each class. Specifically the linear SVM outperformed the rest, while in general the error rates were relatively high. For future work, it would be interesting to use the sklearn implementations and try a variety of kernels and parameters for the entire dataset.
+
+\end{document}
 

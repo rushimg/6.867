@@ -6,13 +6,13 @@ class LR:
 		self.X_train = X
 		self.Y_train = Y 
 		self.l = L
-	
+		self.kernel = self.rbf_kernel	
 	#linear kernel
 	def linear_kernel(self,X,X_prime):
 		return np.dot(X,X_prime)
 	
-	def rbf_kernel(x, y, sigma=5.0):
-	    	return np.exp(-linalg.norm(x-y)**2 / (2 * (sigma ** 2)))
+	def rbf_kernel(self,x, y, sigma=5.0):
+	    	return np.exp(-np.linalg.norm(x-y)**2 / (2 * (sigma ** 2)))
 
 	def train_gold(self):
                 ''' sklearn imlplementation to check results against '''
@@ -49,6 +49,7 @@ class LR:
 		i = 0
 		for el in (self.Y_train):
 			exponent = np.sum(-1*Y[i]*np.dot(self.K,alpha))+w_0
+			print exponent
 			summ += math.log(1+math.exp(exponent))
 			#summ += math.log(1+math.exp(-1*Y[i]*(np.dot(np.dot(X[i],X.T),alpha)+w_0)))
 			#kernel = np.dot(X[i],X.T)
@@ -56,9 +57,11 @@ class LR:
                         ##print inside
 			#summ += math.log(1+math.exp(np.dot(-1*Y[i],(inside))))
                         #i += 1
-		#summ += self.l*np.sum(alpha)
-			#summ += math.log(1+math.exp(-1*self.Y_train[i]))
-	
+		#summ += self.l*np.linalg.norm(alpha)
+		#summ += math.sqrt(self.l+np.linalg.norm(alpha)**2)	
+		#summ += math.log(1+math.exp(-1*self.Y_train[i]))
+		#print summ
+		#summ += math.sqrt(np.linalg.norm(alpha)**2 - self.l)
 		return summ
 	
 	def train(self):
@@ -70,14 +73,14 @@ class LR:
 		K = np.zeros((n_samples, n_samples))
 		for i in range(n_samples):
     			for j in range(n_samples):
-	        		K[i,j] = self.linear_kernel(X[i], X[j])
+	        		K[i,j] = self.kernel(X[i], X[j])
 		self.K = K
-		args = [0.1]*(n_samples+1)
+		args = [1e-4]*(n_samples+1)
 		#args = np.ones((n_samples+1))*.001
-		solution = fmin_bfgs(self.NLL, args)
+		solution = fmin_bfgs(self.NLL, args, maxiter=2)
 
 		self.alphas = solution[0:-1]
-		print self.alphas
+		#print self.alphas
 		self.w_0 = solution[-1]
 		self.calc_w_0()
 		#print self.w_0
@@ -97,8 +100,9 @@ class LR:
 		val = 0
 		for i in range(0,len(self.alphas)):
 			#print i	
-			val += self.alphas[i] * self.Y_train[i] * (np.dot(x_test.T, self.X_train[i]))
+			val += self.alphas[i] * self.Y_train[i] * (self.kernel(x_test.T, self.X_train[i]))
 		val += self.w_0
+		#return val
 		#print val
 		'''decision function'''
 		if val > 0:

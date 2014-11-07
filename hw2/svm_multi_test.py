@@ -4,7 +4,7 @@ from SVM_MULTI import SVM
 import numpy as np
 
 # parameters
-name = 'kaggle'
+name = 'kaggle2'
 print '======Training======'
 # load data from csv files
 train = loadtxt('data/'+name+'_train.csv')

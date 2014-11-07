@@ -40,15 +40,22 @@ class LR:
                 return True
 
 	def NLL(self,args):
+		args = args.reshape(self.Y_train.shape[0], 4)	
+		#print np.matrix(args).shape
 		X = self.X_train
 		Y = self.Y_train
-		alpha = args[0:-1]
+		alpha = args[:,:-1]
 		#w_0 = 0
-		w_0 = args[-1]
+		w_0 = args[:,-1]
 		summ = 0 
 		i = 0
+	
 		for el in (self.Y_train):
-			exponent = np.sum(-1*Y[i]*np.dot(self.K,alpha))+w_0
+			#temp_1 = np.dot(self.K,alpha)
+			#print 'temp1' , temp_1.shape
+			#print Y[i].shape	
+			#temp_2 = Y[i] * np.dot(s
+			exponent = np.sum(-1*Y[i]*np.dot(self.K,alpha).T)
 			summ += math.log(1+math.exp(exponent))
 			#summ += math.log(1+math.exp(-1*Y[i]*(np.dot(np.dot(X[i],X.T),alpha)+w_0)))
 			#kernel = np.dot(X[i],X.T)
@@ -72,13 +79,14 @@ class LR:
     			for j in range(n_samples):
 	        		K[i,j] = self.linear_kernel(X[i], X[j])
 		self.K = K
-		args = [0.1]*(n_samples+1)
+		args = np.zeros((n_samples, 4))
+		#[0.1]*(n_samples+1)
 		#args = np.ones((n_samples+1))*.001
 		solution = fmin_bfgs(self.NLL, args)
 
-		self.alphas = solution[0:-1]
+		self.alphas = solution[:,0:-1]
 		print self.alphas
-		self.w_0 = solution[-1]
+		self.w_0 = solution[:,-1]
 		self.calc_w_0()
 		#print self.w_0
 		num_alphas = 0
